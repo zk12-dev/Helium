@@ -1,8 +1,9 @@
 # Helium
 Helium gives you the ability to turn off some game aspects of the game "Cubic Castles" that are negative towards the player gameplay.
 
-___
 The name of "Helium" was inspired by the mods of Minecraft denominated "Lithium" and "Sodium" which both optimize the gameplay of the game Minecraft, the name of this program was suggested by my friend TreacherousDev.
+
+- NOTE: A DLL named "Memoryx86-64" that are used in this project might be taken as virus by some antiviruses since that DLL enables the option to inject code in the RAM memory to edit the code of the game, you have nothing to worry about.
 ___
 
 No Responsibility Disclaimer:
