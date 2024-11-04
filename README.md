@@ -1,5 +1,5 @@
 # What is Helium?
-Helium is the second element of the periodic table, the *lightest* among the group of *stable*, non-reactive elements known as Noble Gases. Conversely, it is a Cuibic Castles performance mod that makes gameplay more *stable* and *lightweight* by modifying game elements that contribute towards client lag, directly inspired by Minecraft's popular performance mods Lithium, Phosphor and Sodium.
+Helium is the second element of the periodic table, the *lightest* among the group of *stable*, non-reactive elements known as Noble Gases. Conversely, it is a Cubic Castles performance mod that makes gameplay more *stable* and *lightweight* by modifying game elements that contribute towards client lag, directly inspired by Minecraft's popular performance mods Lithium, Phosphor and Sodium.
 ___
 Helium gives you the ability to:
 - Disable item dropping animation
