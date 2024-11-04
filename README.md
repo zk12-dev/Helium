@@ -2,6 +2,8 @@
 Helium gives you the ability to turn off some game aspects of the game "Cubic Castles" that are negative towards the player gameplay.
 
 ___
+The name of "Helium" was inspired by the mods of Minecraft denominated "Lithium" and "Sodium" which both optimize the gameplay of the game Minecraft, the name of this program was suggested by my friend TreacherousDev.
+___
 
 No Responsibility Disclaimer:
 
