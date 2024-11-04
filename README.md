@@ -1,7 +1,7 @@
 # Helium
 Helium gives you the ability to turn off some game aspects of the game "Cubic Castles" that are negative towards the player gameplay.
 
-###########################################################################################################
+___
 
 No Responsibility Disclaimer:
 
@@ -21,7 +21,7 @@ all outcomes, and I, the developer, am not liable for any claims, losses, or dam
 
 Always ensure compliance with the terms of service and applicable rules of any platform, service, or game where you use this code.
 
-###########################################################################################################
+___
 
 All this code is running under the MIT License
 
