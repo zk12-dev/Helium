@@ -231,14 +231,12 @@ namespace Helium
                 noDropAnimationState = NoDropAnimationSwitch.Switched;
                 if (noDropAnimationState)
                 {
-
-                    m.WriteMemory("Cubic.exe+1833B", "bytes", "C7 05 00 08 83 0A 00 10 00 00 F3 0F 10 05 00 08 83 0A F3 0F 11 87 E0 00 00 00 E9 15 17 19 00");
-                    m.WriteMemory("Cubic.exe+1A9A67", "bytes", "E9 CF E8 E6 FF 0F 1F 00");
+                    m.WriteMemory("Cubic.exe+1A9A6B", "byte", "E1");              
                 }
                 else
                 {
-                    m.WriteMemory("Cubic.exe+1A9A67", "bytes", "F3 0F 11 87 E0 00 00 00");
-                    m.WriteMemory("Cubic.exe+1833B", "bytes", "AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC AC");
+                    
+                    m.WriteMemory("Cubic.exe+1A9A6B", "byte", "E0");
                 }
             }
 
