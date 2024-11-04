@@ -1,7 +1,12 @@
-# Helium
-Helium gives you the ability to turn off some game aspects of the game "Cubic Castles" that are negative towards the player gameplay.
+# What is Helium?
+Helium is the second element of the periodic table, the lightest among the group of stable, non-reactive elements known as Noble Gases. Conversely, it is a Cuibc Castles performance mod that makes gameplay more stable and lightweight by modifying game elements that contribute towards client lag. The name takes direct inspiration from the trilogy of Minecraft performance mods Lithium, Phosphor and Sodium.
 
-The name of "Helium" was inspired by the mods of Minecraft denominated "Lithium" and "Sodium" which both optimize the gameplay of the game Minecraft, the name of this program was suggested by my friend TreacherousDev.
+Helium gives you the ability to:
+- Disable item dropping animation
+- Disable item bobbing animation
+- Toggle rendering of dropped items
+- Toggle player nametags visibility
+- Toggle game fog
 
 - NOTE: A DLL named "Memoryx86-64" that are used in this project might be taken as virus by some antiviruses since that DLL enables the option to inject code in the RAM memory to edit the code of the game, you have nothing to worry about.
 ___
@@ -23,6 +28,8 @@ By using this code, you acknowledge that you assume full responsibility for any 
 all outcomes, and I, the developer, am not liable for any claims, losses, or damages in connection with its use.
 
 Always ensure compliance with the terms of service and applicable rules of any platform, service, or game where you use this code.
+___
+
 
 ___
 
