@@ -96,6 +96,17 @@ namespace Helium
             );
         }
 
+        private void InfoSlider(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                 "This option will reset itself/be bugged when changing between realms/rooms/overworlds. Please slide the slider again to your desired view distance to reapply the effect.",
+                 "Information",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Warning
+
+            );
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             StartProcessCheckTimer();
@@ -163,14 +174,11 @@ namespace Helium
                 processCheckTimer.Dispose();
             }
 
-            base.OnFormClosing(e);
-
             HotkeyManager.Current.Remove("F1");
             HotkeyManager.Current.Remove("F2");
             HotkeyManager.Current.Remove("F3");
             HotkeyManager.Current.Remove("F4");
             HotkeyManager.Current.Remove("F5");
-            HotkeyManager.Current.Remove("F6");
             base.OnFormClosing(e);
         }
 
@@ -181,8 +189,13 @@ namespace Helium
             NoRenderItemsSwitch.Switched = isEnabled;
             NoBobbingSwitch.Switched = isEnabled;
             NoDropAnimationSwitch.Switched = isEnabled;
-            ViewDistanceSlider.Value = 100;
             HideNamesSwitch.Switched = isEnabled;
+
+            if (enableALL.Checked)
+            {
+                ViewDistanceSlider.Value = 100;
+            }   
+            else ViewDistanceSlider.Value = 80;
         }
 
 
@@ -275,16 +288,10 @@ namespace Helium
                 {
                     m.WriteMemory("Cubic.exe+1A6F1B", "byte", "00");
                 }
-            }
-
-            
+            }  
         }
 
-        private void metroSetTextBox1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
-
 }
 

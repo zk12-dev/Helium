@@ -33,6 +33,7 @@ namespace Helium
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.TabControl = new Sunny.UI.UITabControl();
             this.Utility = new System.Windows.Forms.TabPage();
+            this.uiImageButton4 = new Sunny.UI.UIImageButton();
             this.ViewDistanceSlider = new MetroSet_UI.Controls.MetroSetTrackBar();
             this.HideNamesLabel = new MetroSet_UI.Controls.MetroSetLabel();
             this.HideNamesSwitch = new MetroSet_UI.Controls.MetroSetSwitch();
@@ -57,6 +58,7 @@ namespace Helium
             this.HeliumWorker = new System.ComponentModel.BackgroundWorker();
             this.TabControl.SuspendLayout();
             this.Utility.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
@@ -117,6 +119,7 @@ namespace Helium
             // 
             this.Utility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Utility.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Utility.Controls.Add(this.uiImageButton4);
             this.Utility.Controls.Add(this.ViewDistanceSlider);
             this.Utility.Controls.Add(this.HideNamesLabel);
             this.Utility.Controls.Add(this.HideNamesSwitch);
@@ -137,6 +140,21 @@ namespace Helium
             this.Utility.Size = new System.Drawing.Size(482, 215);
             this.Utility.TabIndex = 0;
             this.Utility.Text = "Utility";
+            // 
+            // uiImageButton4
+            // 
+            this.uiImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.uiImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton4.Image")));
+            this.uiImageButton4.Location = new System.Drawing.Point(270, 147);
+            this.uiImageButton4.Name = "uiImageButton4";
+            this.uiImageButton4.Size = new System.Drawing.Size(22, 22);
+            this.uiImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uiImageButton4.TabIndex = 16;
+            this.uiImageButton4.TabStop = false;
+            this.uiImageButton4.Text = null;
+            this.uiImageButton4.Click += new System.EventHandler(this.InfoSlider);
             // 
             // ViewDistanceSlider
             // 
@@ -160,7 +178,7 @@ namespace Helium
             this.ViewDistanceSlider.ThemeAuthor = "Narwin";
             this.ViewDistanceSlider.ThemeName = "MetroLite";
             this.ViewDistanceSlider.Value = 0;
-            this.ViewDistanceSlider.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ViewDistanceSlider.ValueColor = System.Drawing.Color.Red;
             // 
             // HideNamesLabel
             // 
@@ -208,7 +226,7 @@ namespace Helium
             this.uiImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton3.Image")));
-            this.uiImageButton3.Location = new System.Drawing.Point(230, 80);
+            this.uiImageButton3.Location = new System.Drawing.Point(270, 80);
             this.uiImageButton3.Name = "uiImageButton3";
             this.uiImageButton3.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,7 +241,7 @@ namespace Helium
             this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton2.Image")));
-            this.uiImageButton2.Location = new System.Drawing.Point(230, 45);
+            this.uiImageButton2.Location = new System.Drawing.Point(270, 45);
             this.uiImageButton2.Name = "uiImageButton2";
             this.uiImageButton2.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -238,7 +256,7 @@ namespace Helium
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
-            this.uiImageButton1.Location = new System.Drawing.Point(230, 115);
+            this.uiImageButton1.Location = new System.Drawing.Point(270, 115);
             this.uiImageButton1.Name = "uiImageButton1";
             this.uiImageButton1.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -417,9 +435,9 @@ namespace Helium
             this.Information.Controls.Add(this.proID);
             this.Information.Controls.Add(this.procIDLabel);
             this.Information.ForeColor = System.Drawing.Color.White;
-            this.Information.Location = new System.Drawing.Point(0, 30);
+            this.Information.Location = new System.Drawing.Point(0, 40);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(482, 215);
+            this.Information.Size = new System.Drawing.Size(200, 60);
             this.Information.TabIndex = 1;
             this.Information.Text = "Information";
             // 
@@ -449,6 +467,7 @@ namespace Helium
             this.Status.StyleManager = null;
             this.Status.TabIndex = 5;
             this.Status.Text = "STATUS:";
+            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Status.ThemeAuthor = "Narwin";
             this.Status.ThemeName = "MetroLite";
             // 
@@ -463,6 +482,7 @@ namespace Helium
             this.getStatus.StyleManager = null;
             this.getStatus.TabIndex = 4;
             this.getStatus.Text = "DISCONNECTED";
+            this.getStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.getStatus.ThemeAuthor = "Narwin";
             this.getStatus.ThemeName = "MetroLite";
             // 
@@ -491,6 +511,7 @@ namespace Helium
             this.proID.StyleManager = null;
             this.proID.TabIndex = 2;
             this.proID.Text = "PROCESS:";
+            this.proID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.proID.ThemeAuthor = "Narwin";
             this.proID.ThemeName = "MetroLite";
             // 
@@ -505,6 +526,7 @@ namespace Helium
             this.procIDLabel.StyleManager = null;
             this.procIDLabel.TabIndex = 1;
             this.procIDLabel.Text = "DISCONNECTED";
+            this.procIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.procIDLabel.ThemeAuthor = "Narwin";
             this.procIDLabel.ThemeName = "MetroLite";
             // 
@@ -544,6 +566,7 @@ namespace Helium
             this.TabControl.ResumeLayout(false);
             this.Utility.ResumeLayout(false);
             this.Utility.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
@@ -578,6 +601,7 @@ namespace Helium
         private MetroSet_UI.Controls.MetroSetSwitch NoDropAnimationSwitch;
         private MetroSet_UI.Controls.MetroSetLabel HotKeysInfo;
         private MetroSet_UI.Controls.MetroSetTrackBar ViewDistanceSlider;
+        private Sunny.UI.UIImageButton uiImageButton4;
     }
 }
 
