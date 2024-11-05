@@ -240,8 +240,8 @@ namespace Helium
 
             if (ViewDistanceSlider.Value != viewDistanceSlider)
             {
-                // Some normalizing math to make the value from 40 to 250 and properly proportional 
-                int normalized_value = Convert.ToInt32(Math.Pow(ViewDistanceSlider.Value, 1.1) + 40);
+                // Some normalizing math to make the value from 0 to 251 and properly proportional 
+                int normalized_value = Convert.ToInt32(Math.Pow(ViewDistanceSlider.Value, 1.2));
                 string hexCode = normalized_value.ToString("x2");
                 viewDistanceSlider = ViewDistanceSlider.Value;
                 m.WriteMemory("Cubic.exe+2F6F98", "byte", hexCode);
