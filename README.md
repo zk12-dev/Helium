@@ -30,9 +30,6 @@ all outcomes, and I, the developer, am not liable for any claims, losses, or dam
 Always ensure compliance with the terms of service and applicable rules of any platform, service, or game where you use this code.
 ___
 
-
-___
-
 All this code is running under the MIT License
 
 Copyrighted (c) 2024 by zk12 A.K.A Hispano
