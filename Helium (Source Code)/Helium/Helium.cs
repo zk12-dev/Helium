@@ -34,11 +34,10 @@ namespace Helium
             _hotkeyMap = new Dictionary<string, int>
             {
                 { "F1", 1 },
-                { "F4", 2 },
+                { "F2", 2 },
                 { "F3", 3 },
-                { "F5", 4 },
-                { "F2", 5 },
-                { "F6", 6}
+                { "F4", 4 },
+                { "F5", 5 },
             };
 
             _scriptActions = new Dictionary<int, ToggleAction>
@@ -47,8 +46,7 @@ namespace Helium
                     { 2, () => NoBobbingSwitch.Switched = !NoBobbingSwitch.Switched },
                     { 3, () => NoRenderItemsSwitch.Switched = !NoRenderItemsSwitch.Switched },
                     { 4, () => HideNamesSwitch.Switched = !HideNamesSwitch.Switched },
-                    { 5, () => NoFogRenderSwitch.Switched = !NoFogRenderSwitch.Switched },
-                    { 6, () => enableALL.Checked = !enableALL.Checked }
+                    { 5, () => enableALL.Checked = !enableALL.Checked }
             };
 
             foreach (var kvp in _hotkeyMap)
@@ -183,7 +181,7 @@ namespace Helium
             NoRenderItemsSwitch.Switched = isEnabled;
             NoBobbingSwitch.Switched = isEnabled;
             NoDropAnimationSwitch.Switched = isEnabled;
-            NoFogRenderSwitch.Switched = isEnabled;
+            ViewDistanceSlider.Value = 100;
             HideNamesSwitch.Switched = isEnabled;
         }
 
@@ -192,7 +190,7 @@ namespace Helium
 
         private bool noRenderItemsState = false;
         private bool noDropAnimationState = false;
-        private bool noFogRenderState = false;
+        private int viewDistanceSlider = 50;
         private bool noBobbingState = false;
         private bool noNameState = false;
 
@@ -240,19 +238,17 @@ namespace Helium
                 }
             }
 
-            if (NoFogRenderSwitch.Switched != noFogRenderState)
+            if (ViewDistanceSlider.Value != viewDistanceSlider)
             {
-                noFogRenderState = NoFogRenderSwitch.Switched;
-                if (noFogRenderState)
-                {
-                    m.WriteMemory("Cubic.exe+2F6F98", "byte", "FF");
-                }
-                else
-                {
-                    m.WriteMemory("Cubic.exe+2F6F98", "byte", "50");
-                }
+                // Some normalizing math to make the value from 0 to 251 and properly proportional 
+                int normalized_value = Convert.ToInt32(Math.Pow(ViewDistanceSlider.Value, 1.2));
+                string hexCode = normalized_value.ToString("x2");
+                viewDistanceSlider = ViewDistanceSlider.Value;
+                m.WriteMemory("Cubic.exe+2F6F98", "byte", hexCode);
+ 
             }
-            
+
+
             if (NoBobbingSwitch.Switched != noBobbingState)
             {
                 noBobbingState = NoBobbingSwitch.Switched;
@@ -284,7 +280,10 @@ namespace Helium
             
         }
 
+        private void metroSetTextBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

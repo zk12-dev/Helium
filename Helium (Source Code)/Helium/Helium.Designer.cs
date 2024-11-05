@@ -33,13 +33,13 @@ namespace Helium
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.TabControl = new Sunny.UI.UITabControl();
             this.Utility = new System.Windows.Forms.TabPage();
+            this.ViewDistanceSlider = new MetroSet_UI.Controls.MetroSetTrackBar();
             this.HideNamesLabel = new MetroSet_UI.Controls.MetroSetLabel();
             this.HideNamesSwitch = new MetroSet_UI.Controls.MetroSetSwitch();
             this.uiImageButton3 = new Sunny.UI.UIImageButton();
             this.uiImageButton2 = new Sunny.UI.UIImageButton();
             this.uiImageButton1 = new Sunny.UI.UIImageButton();
             this.NoFogRenderLabel = new MetroSet_UI.Controls.MetroSetLabel();
-            this.NoFogRenderSwitch = new MetroSet_UI.Controls.MetroSetSwitch();
             this.NoBobbingLabel = new MetroSet_UI.Controls.MetroSetLabel();
             this.NoRenderLabel = new MetroSet_UI.Controls.MetroSetLabel();
             this.NoDropLabel = new MetroSet_UI.Controls.MetroSetLabel();
@@ -117,13 +117,13 @@ namespace Helium
             // 
             this.Utility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Utility.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Utility.Controls.Add(this.ViewDistanceSlider);
             this.Utility.Controls.Add(this.HideNamesLabel);
             this.Utility.Controls.Add(this.HideNamesSwitch);
             this.Utility.Controls.Add(this.uiImageButton3);
             this.Utility.Controls.Add(this.uiImageButton2);
             this.Utility.Controls.Add(this.uiImageButton1);
             this.Utility.Controls.Add(this.NoFogRenderLabel);
-            this.Utility.Controls.Add(this.NoFogRenderSwitch);
             this.Utility.Controls.Add(this.NoBobbingLabel);
             this.Utility.Controls.Add(this.NoRenderLabel);
             this.Utility.Controls.Add(this.NoDropLabel);
@@ -138,11 +138,35 @@ namespace Helium
             this.Utility.TabIndex = 0;
             this.Utility.Text = "Utility";
             // 
+            // ViewDistanceSlider
+            // 
+            this.ViewDistanceSlider.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
+            this.ViewDistanceSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewDistanceSlider.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.ViewDistanceSlider.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.ViewDistanceSlider.DisabledHandlerColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.ViewDistanceSlider.DisabledValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
+            this.ViewDistanceSlider.HandlerColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.ViewDistanceSlider.IsDerivedStyle = true;
+            this.ViewDistanceSlider.Location = new System.Drawing.Point(10, 151);
+            this.ViewDistanceSlider.Maximum = 100;
+            this.ViewDistanceSlider.Minimum = 0;
+            this.ViewDistanceSlider.Name = "ViewDistanceSlider";
+            this.ViewDistanceSlider.Size = new System.Drawing.Size(143, 16);
+            this.ViewDistanceSlider.Style = MetroSet_UI.Enums.Style.Light;
+            this.ViewDistanceSlider.StyleManager = null;
+            this.ViewDistanceSlider.TabIndex = 15;
+            this.ViewDistanceSlider.Text = "metroSetTrackBar1";
+            this.ViewDistanceSlider.ThemeAuthor = "Narwin";
+            this.ViewDistanceSlider.ThemeName = "MetroLite";
+            this.ViewDistanceSlider.Value = 0;
+            this.ViewDistanceSlider.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            // 
             // HideNamesLabel
             // 
             this.HideNamesLabel.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HideNamesLabel.IsDerivedStyle = true;
-            this.HideNamesLabel.Location = new System.Drawing.Point(74, 150);
+            this.HideNamesLabel.Location = new System.Drawing.Point(74, 115);
             this.HideNamesLabel.Name = "HideNamesLabel";
             this.HideNamesLabel.Size = new System.Drawing.Size(150, 22);
             this.HideNamesLabel.Style = MetroSet_UI.Enums.Style.Custom;
@@ -165,7 +189,7 @@ namespace Helium
             this.HideNamesSwitch.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.HideNamesSwitch.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.HideNamesSwitch.IsDerivedStyle = true;
-            this.HideNamesSwitch.Location = new System.Drawing.Point(10, 150);
+            this.HideNamesSwitch.Location = new System.Drawing.Point(10, 115);
             this.HideNamesSwitch.Name = "HideNamesSwitch";
             this.HideNamesSwitch.Size = new System.Drawing.Size(58, 22);
             this.HideNamesSwitch.Style = MetroSet_UI.Enums.Style.Custom;
@@ -184,7 +208,7 @@ namespace Helium
             this.uiImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton3.Image")));
-            this.uiImageButton3.Location = new System.Drawing.Point(225, 115);
+            this.uiImageButton3.Location = new System.Drawing.Point(230, 80);
             this.uiImageButton3.Name = "uiImageButton3";
             this.uiImageButton3.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -199,7 +223,7 @@ namespace Helium
             this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton2.Image")));
-            this.uiImageButton2.Location = new System.Drawing.Point(190, 80);
+            this.uiImageButton2.Location = new System.Drawing.Point(230, 45);
             this.uiImageButton2.Name = "uiImageButton2";
             this.uiImageButton2.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -214,7 +238,7 @@ namespace Helium
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
-            this.uiImageButton1.Location = new System.Drawing.Point(175, 45);
+            this.uiImageButton1.Location = new System.Drawing.Point(230, 115);
             this.uiImageButton1.Name = "uiImageButton1";
             this.uiImageButton1.Size = new System.Drawing.Size(22, 22);
             this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -227,47 +251,22 @@ namespace Helium
             // 
             this.NoFogRenderLabel.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoFogRenderLabel.IsDerivedStyle = true;
-            this.NoFogRenderLabel.Location = new System.Drawing.Point(74, 45);
+            this.NoFogRenderLabel.Location = new System.Drawing.Point(161, 147);
             this.NoFogRenderLabel.Name = "NoFogRenderLabel";
             this.NoFogRenderLabel.Size = new System.Drawing.Size(98, 22);
             this.NoFogRenderLabel.Style = MetroSet_UI.Enums.Style.Custom;
             this.NoFogRenderLabel.StyleManager = null;
             this.NoFogRenderLabel.TabIndex = 8;
-            this.NoFogRenderLabel.Text = "NO FOG RENDER";
+            this.NoFogRenderLabel.Text = "VIEW DISTANCE";
             this.NoFogRenderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NoFogRenderLabel.ThemeAuthor = "Narwin";
             this.NoFogRenderLabel.ThemeName = "MetroLite";
-            // 
-            // NoFogRenderSwitch
-            // 
-            this.NoFogRenderSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.NoFogRenderSwitch.BackgroundColor = System.Drawing.Color.Empty;
-            this.NoFogRenderSwitch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(159)))), ((int)(((byte)(147)))));
-            this.NoFogRenderSwitch.CheckColor = System.Drawing.Color.Red;
-            this.NoFogRenderSwitch.CheckState = MetroSet_UI.Enums.CheckState.Unchecked;
-            this.NoFogRenderSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NoFogRenderSwitch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.NoFogRenderSwitch.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.NoFogRenderSwitch.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.NoFogRenderSwitch.IsDerivedStyle = true;
-            this.NoFogRenderSwitch.Location = new System.Drawing.Point(10, 45);
-            this.NoFogRenderSwitch.Name = "NoFogRenderSwitch";
-            this.NoFogRenderSwitch.Size = new System.Drawing.Size(58, 22);
-            this.NoFogRenderSwitch.Style = MetroSet_UI.Enums.Style.Custom;
-            this.NoFogRenderSwitch.StyleManager = null;
-            this.NoFogRenderSwitch.Switched = false;
-            this.NoFogRenderSwitch.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.NoFogRenderSwitch.TabIndex = 7;
-            this.NoFogRenderSwitch.Text = "DRP";
-            this.NoFogRenderSwitch.ThemeAuthor = "Hispano";
-            this.NoFogRenderSwitch.ThemeName = "Helium-Red";
-            this.NoFogRenderSwitch.UnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             // 
             // NoBobbingLabel
             // 
             this.NoBobbingLabel.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoBobbingLabel.IsDerivedStyle = true;
-            this.NoBobbingLabel.Location = new System.Drawing.Point(74, 115);
+            this.NoBobbingLabel.Location = new System.Drawing.Point(74, 45);
             this.NoBobbingLabel.Name = "NoBobbingLabel";
             this.NoBobbingLabel.Size = new System.Drawing.Size(150, 22);
             this.NoBobbingLabel.Style = MetroSet_UI.Enums.Style.Custom;
@@ -369,7 +368,7 @@ namespace Helium
             this.NoBobbingSwitch.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.NoBobbingSwitch.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.NoBobbingSwitch.IsDerivedStyle = true;
-            this.NoBobbingSwitch.Location = new System.Drawing.Point(10, 115);
+            this.NoBobbingSwitch.Location = new System.Drawing.Point(10, 45);
             this.NoBobbingSwitch.Name = "NoBobbingSwitch";
             this.NoBobbingSwitch.Size = new System.Drawing.Size(58, 22);
             this.NoBobbingSwitch.Style = MetroSet_UI.Enums.Style.Custom;
@@ -434,9 +433,8 @@ namespace Helium
             this.HotKeysInfo.Style = MetroSet_UI.Enums.Style.Light;
             this.HotKeysInfo.StyleManager = null;
             this.HotKeysInfo.TabIndex = 6;
-            this.HotKeysInfo.Text = "HotKeys to toggle the utilities:\r\nF1 -> NO DROP ANIMATION\r\nF2 -> NO FOG RENDER\r\nF" +
-    "3 -> NO ITEMS RENDER\r\nF4 -> NO BOBBING ANIMATION\r\nF5 -> HIDE ALL NAMES\r\nF6 -> EN" +
-    "ABLE ALL\r\n";
+            this.HotKeysInfo.Text = "HotKeys to toggle the utilities:\r\nF1 -> NO DROP ANIMATION\r\nF2 -> NO ITEMS RENDER\r" +
+    "\nF3 -> NO BOBBING ANIMATION\r\nF4 -> HIDE ALL NAMES\r\nF5 -> ENABLE ALL\r\n";
             this.HotKeysInfo.ThemeAuthor = "Narwin";
             this.HotKeysInfo.ThemeName = "MetroLite";
             // 
@@ -571,7 +569,6 @@ namespace Helium
         private MetroSet_UI.Controls.MetroSetLabel NoRenderLabel;
         private MetroSet_UI.Controls.MetroSetLabel NoDropLabel;
         private System.ComponentModel.BackgroundWorker HeliumWorker;
-        private MetroSet_UI.Controls.MetroSetSwitch NoFogRenderSwitch;
         private MetroSet_UI.Controls.MetroSetLabel NoFogRenderLabel;
         private Sunny.UI.UIImageButton uiImageButton1;
         private Sunny.UI.UIImageButton uiImageButton3;
@@ -580,6 +577,7 @@ namespace Helium
         private MetroSet_UI.Controls.MetroSetSwitch HideNamesSwitch;
         private MetroSet_UI.Controls.MetroSetSwitch NoDropAnimationSwitch;
         private MetroSet_UI.Controls.MetroSetLabel HotKeysInfo;
+        private MetroSet_UI.Controls.MetroSetTrackBar ViewDistanceSlider;
     }
 }
 
