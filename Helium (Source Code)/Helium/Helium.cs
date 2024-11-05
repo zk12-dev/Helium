@@ -272,7 +272,7 @@ namespace Helium
                 }
                 else
                 {
-                    m.WriteMemory("Cubic.exe+1A9917", "bytes", "F3 0F 58 05 2C 0D 5D 00");
+                    m.WriteMemory("Cubic.exe+1A9917", "bytes", "F3 0F 58 05 2C 0D 5B 00");
                     m.WriteMemory("Cubic.exe+1A992F", "bytes", "F3 0F 58 C1");
                 }
             }

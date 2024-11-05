@@ -34,6 +34,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+*.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -396,3 +397,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+Helium (Source Code)/.vs/Helium/FileContentIndex/4eb95afe-d9c9-46d8-989b-8d13026a902a.vsidx
+/Helium (Source Code)/.vs
+*.vsidx
+Helium (Source Code)/.vs/Helium/v17/DocumentLayout.json
