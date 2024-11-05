@@ -6,7 +6,7 @@ Helium gives you the ability to:
 - Disable item bobbing animation
 - Toggle rendering of dropped items
 - Toggle player nametags visibility
-- Toggle game fog
+- Adjust game view distance
 ___
 - NOTE: A DLL named "Memoryx86-64" that are used in this project might be taken as virus by some antiviruses since that DLL enables the option to inject code in the RAM memory to edit the code of the game, you have nothing to worry about.
 ___
