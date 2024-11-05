@@ -397,3 +397,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+Helium (Source Code)/.vs/Helium/FileContentIndex/4eb95afe-d9c9-46d8-989b-8d13026a902a.vsidx
+/Helium (Source Code)/.vs
+*.vsidx
+Helium (Source Code)/.vs/Helium/v17/DocumentLayout.json
