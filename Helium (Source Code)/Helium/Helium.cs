@@ -123,30 +123,66 @@ namespace Helium
             processCheckTimer.Enabled = true;
         }
 
+        private bool hasReadMemory = false;
+        private bool wasConnected = false;
+        public string BobbingArrayY;
+        public string BobbingArrayZX;
+
+        // This reads and tells you if the program can find the game process (Cubic.exe)
         private void ProcessCheckTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            int pID = m.GetProcIdFromName("Cubic");
-            bool openProc = false;
-            if (pID > 0)
-            {
-                openProc = m.OpenProcess(pID);
-                UpdateLabel(procIDLabel, pID.ToString(), Color.Green);
-                
-            }
-            else
-            {
-                UpdateLabel(procIDLabel, "DISCONNECTED", Color.Red);
-            }
+            processCheckTimer.Enabled = false; 
 
-            if (!openProc)
+            int pID = m.GetProcIdFromName("Cubic");
+            bool openProc = pID > 0 && m.OpenProcess(pID);
+
+            if (openProc)
             {
-                UpdateLabel(getStatus, "DISCONNECTED", Color.Red);
+                this.Invoke(new Action(() =>
+                {
+                    UpdateLabel(procIDLabel, pID.ToString(), Color.Green);
+                    UpdateLabel(getStatus, "CONNECTED", Color.Green);
+                }));
+
+                if (!wasConnected)
+                {
+                    wasConnected = true;
+                    hasReadMemory = false;
+                }
+
+                // Only read memory once, this can be used in the future to read more addresses if they don't have static bytes
+                if (!hasReadMemory)
+                {
+                    int byteCountBobY = 8;
+                    int byteCountBobZX = 4;
+                    byte[] BobY = m.ReadBytes("Cubic.exe+1A9917", byteCountBobY);
+                    byte[] BobZX = m.ReadBytes("Cubic.exe+1A992F", byteCountBobZX);
+
+                    if (byteCountBobY != 0 | byteCountBobZX != 0)
+                    {
+                        BobbingArrayY = BitConverter.ToString(BobY).Replace("-", " ");
+                        BobbingArrayZX = BitConverter.ToString(BobZX).Replace("-", " ");
+                        hasReadMemory = true;
+                    }
+                }
             }
             else
             {
-                UpdateLabel(getStatus, "CONNECTED", Color.Green);
+                this.Invoke(new Action(() =>
+                {
+                    UpdateLabel(procIDLabel, "DISCONNECTED", Color.Red);
+                    UpdateLabel(getStatus, "DISCONNECTED", Color.Red);
+                }));
+
+                if (wasConnected)
+                {
+                    wasConnected = false;
+                    hasReadMemory = false;  // Allow reading again in the future if the process gets disconnected.
+                }
             }
+            processCheckTimer.Enabled = true;
         }
+
 
         private void UpdateLabel(Label label, string text, Color color)
         {
@@ -272,8 +308,8 @@ namespace Helium
                 }
                 else
                 {
-                    m.WriteMemory("Cubic.exe+1A9917", "bytes", "F3 0F 58 05 2C 0D 5B 00");
-                    m.WriteMemory("Cubic.exe+1A992F", "bytes", "F3 0F 58 C1");
+                    m.WriteMemory("Cubic.exe+1A9917", "bytes", BobbingArrayY);
+                    m.WriteMemory("Cubic.exe+1A992F", "bytes", BobbingArrayZX);
                 }
             }
 
